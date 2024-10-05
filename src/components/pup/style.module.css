@@ -10,7 +10,7 @@
 
 
 
-.popa{
+.popa {
     padding: 20px 20px;
     background: linear-gradient(135deg, #d1e8d2, #a8e6cf);
     min-height: 100vh;
@@ -21,4 +21,32 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+.popa h1{
+text-align: center;
+}
+.kit {
+
+    display: flex;
+    flex-direction: column; /* Измените направление на колонку */
+    align-items: flex-start; /* Выравнивание по левому краю */
+    margin: 70px; /* Отступ между полями */
+}
+
+.kit label {
+
+    margin-bottom: 5px; /* Отступ между label и input */
+}
+.popa input{
+    width: 60vw;
+    height: 7vh;
+}
+.popa button{
+    
+    background-color: rgb(174, 216, 106);
+    border-radius: 3px;
+    width: 20vw;
+    height: 10vh;
+    border: none;
+    
 }

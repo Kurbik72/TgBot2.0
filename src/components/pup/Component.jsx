@@ -10,10 +10,15 @@ return (
 <div className={Style.popa}>
     <form>
         <h1>Для того, чтобы сделать визитку, введите свои данные:</h1>
-        <input name="FIO" type="text"/>
+        <div className={Style.kit}>
         <label htmlFor="FIO">ФИО</label>
-        <input name="About" type="text"/>
+        <input name="FIO" type="text"
+        placeholder/>
         <label htmlFor="About">О себе</label>
+        <input name="About" type="text"
+        placeholder/>
+        
+        </div>
         <button>Создать</button>
     </form>
     </div>
