@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    
+    
+}
+
+
+
+
+.popa{
+    padding: 20px 20px;
+    background: linear-gradient(135deg, #d1e8d2, #a8e6cf);
+    min-height: 100vh;
+
+
+}
+.popa form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
