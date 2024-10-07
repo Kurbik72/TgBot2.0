@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    
+    
+}
+
+
+
+
+.popa {
+    padding: 20px 20px;
+    background: linear-gradient(135deg, #d1e8d2, #a8e6cf);
+    min-height: 100vh;
+
+
+}
+.popa form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.popa h1{
+text-align: center;
+font-family: 'Font1';
+color: #193128;
+}
+.kit {
+
+    display: flex;
+    flex-direction: column; /* Измените направление на колонку */
+    align-items: flex-start; /* Выравнивание по левому краю */
+    margin: 110px; /* Отступ между полями */
+}
+
+.kit label {
+    font-family: 'Font1';
+
+    margin-bottom: 5px; /* Отступ между label и input */
+}
+.popa input{
+    
+    margin-bottom: 25px;
+    font-family: 'Font1';
+    font-size: 17px;
+    padding: 0px 20px;
+    background-color: #dcefdd;
+    border-radius: 4px;
+    border:1px solid #ffff;
+    width: 60vw;
+    height: 7vh;
+}
+.popa button{
+    
+    background-color: rgb(174, 216, 106);
+    border-radius: 3px;
+    width: 20vw;
+    height: 8vh;
+    border: none;
+    font-family: 'Font1';
+    font-size: 17px;
+    cursor: pointer;
+    
+}
+@font-face {
+    font-family: 'Font1';
+    src: url('../../fonts/Lineyka.otf');
+    font-weight: normal;
+    font-style: normal;
+}
