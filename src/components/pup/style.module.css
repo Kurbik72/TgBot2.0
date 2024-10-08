@@ -23,6 +23,8 @@
     flex-direction: column;
 }
 .popa h1{
+font-size: 22px;
+padding: 20px 0px;
 text-align: center;
 font-family: 'Font1';
 color: #193128;
@@ -33,6 +35,9 @@ color: #193128;
     flex-direction: column; /* Измените направление на колонку */
     align-items: flex-start; /* Выравнивание по левому краю */
     margin: 110px; /* Отступ между полями */
+    
+    
+    
 }
 
 .kit label {
@@ -53,10 +58,10 @@ color: #193128;
     height: 7vh;
 }
 .popa button{
-    
+    text-decoration: none;
     background-color: rgb(174, 216, 106);
-    border-radius: 3px;
-    width: 20vw;
+    border-radius: 10px;
+    width: 30vw;
     height: 8vh;
     border: none;
     font-family: 'Font1';

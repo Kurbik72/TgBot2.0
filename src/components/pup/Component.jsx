@@ -1,15 +1,23 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Style from '../../components/pup/style.module.css'
+import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 
 
 
-const component = () => {
+const Component = () => {
+    const location = useLocation();
+    const navigate = useNavigate();
 
+    useEffect(() => {
+    console.log('Current location is ', location);
+    }, [location]);
 
 return (
+    
 <div className={Style.popa}>
     <form>
         <h1>Для того, чтобы сделать визитку, введите свои данные:</h1>
+        
         <div className={Style.kit}>
         <label htmlFor="FIO">ФИО</label>
         <input name="FIO" type="text"
@@ -18,11 +26,14 @@ return (
         <input name="About" type="text"
         placeholder/>
         
+        
         </div>
-        <button>Создать</button>
+        <button onClick={() => navigate('visitpage', { replace: false })}>Создать</button>
     </form>
+    <Outlet/>
     </div>
+    
 );
 };
 
-export default component;
+export default Component;
