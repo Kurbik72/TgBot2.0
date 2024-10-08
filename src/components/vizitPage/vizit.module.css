@@ -1,0 +1,47 @@
+*{
+box-sizing: border-box;
+padding: 0;
+margin: 0;
+text-decoration: none;
+
+
+}
+
+.txt{
+    background: linear-gradient(135deg, #d1e8d2, #73c1a4);
+min-height: 100vh;
+}
+.form{
+    width: 75vw;
+    border-radius: 20px;
+    height: 45vh;
+    background: linear-gradient(135deg, #9ecba1, #2feba6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+@media screen and  (max-width:500px){
+    .txt{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.secondStep p, h1{
+
+
+    padding: 20px 0px;
+    font-family: 'Font1';
+    font-size: 20px;
+    
+}
+@font-face {
+    font-family: 'Font1';
+    src: url('../../fonts/Lineyka.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
