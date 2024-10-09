@@ -16,11 +16,43 @@ const Component = () => {
 
     const [username, setUsername] = useState('');
     const [about, setAbout] = useState('');
+    const [RedInputs, SetRed] = useState('false')
 
     const handleSubmit = (e) => {
-        e.preventDefault();
-        // Передаем данные в состояние
-        navigate('/visitpage', { state: { username, about} });
+        e.preventDefault(); // Предотвращаем стандартное поведение формы
+    
+
+
+
+        const Formdata = () => {
+            const data = {
+                Fio: username,
+                Me: about
+            };
+    
+            if (data.Fio != null && data.Fio.length === 0 ) {
+                alert('Заполните поле');
+                console.log(RedInputs);
+                return false; // Завершаем выполнение, если поле пустое
+            }
+
+            if (data.Me != null && data.Me.length === 0){
+                alert('Заполните поле');
+                SetRed(true);
+                return false;
+            }
+            
+    
+            // Здесь можно добавить дополнительные проверки, если нужно
+            SetRed(false);
+            return true; // Возвращаем true, если всё в порядке
+            
+        };
+    
+        if (Formdata()) {
+            // Если все проверки пройдены, переходим на новую страницу
+            navigate('/visitpage', { state: { username, about } });
+        }
     };
 
     return (
@@ -31,7 +63,8 @@ const Component = () => {
                 <div className={Style.kit}>
                     <label htmlFor="FIO">ФИО</label>
                     <input
-                        name="FIO" 
+                        className={RedInputs ? Style.red : ''} 
+                        name="Fio" 
                         type="text" 
                         placeholder="ФИО" 
                         value={username} 
@@ -40,14 +73,15 @@ const Component = () => {
                     
                     <label htmlFor="About">О себе</label>
                     <input 
-                        name="About" 
+                        className={RedInputs ? Style.red : ''} 
+                        name="Me" 
                         type="text" 
                         placeholder="О себе" 
                         value={about} 
                         onChange={(e) => setAbout(e.target.value)} 
                     />
                 </div>
-                <button type="submit">Создать</button>
+                <button type="submit" >Создать</button>
             </form>
             <Outlet />
         </div>
