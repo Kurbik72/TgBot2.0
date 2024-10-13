@@ -17,6 +17,25 @@ const Component = () => {
     const [username, setUsername] = useState('');
     const [about, setAbout] = useState('');
     const [RedInputs, SetRed] = useState('false')
+    const [WhiteInputs, SetWhite] = useState('true');
+    const [ErrorTxt, SetError] = useState(false);
+
+    
+
+
+    const VisualFunctuion = () => {
+        const data = {
+            Fio: username,
+            Me: about
+        };
+        
+        if (data.Fio != null && data.Fio.length === 0 ) {
+            SetError(true);
+        }
+        if (data.Me != null && data.Me.length === 0){
+            SetError(true);
+        }
+    };
 
     const handleSubmit = (e) => {
         e.preventDefault(); // Предотвращаем стандартное поведение формы
@@ -31,14 +50,14 @@ const Component = () => {
             };
     
             if (data.Fio != null && data.Fio.length === 0 ) {
-                alert('Заполните поле');
-                console.log(RedInputs);
+                SetRed(true);
+                SetWhite(false);
                 return false; // Завершаем выполнение, если поле пустое
             }
 
             if (data.Me != null && data.Me.length === 0){
-                alert('Заполните поле');
                 SetRed(true);
+                SetWhite(false);
                 return false;
             }
             
@@ -63,7 +82,7 @@ const Component = () => {
                 <div className={Style.kit}>
                     <label htmlFor="FIO">ФИО</label>
                     <input
-                        className={RedInputs ? Style.red : ''} 
+                        className={`${RedInputs ? Style.red : ''} ${WhiteInputs ? Style.White : ''}`}
                         name="Fio" 
                         type="text" 
                         placeholder="ФИО" 
@@ -73,15 +92,22 @@ const Component = () => {
                     
                     <label htmlFor="About">О себе</label>
                     <input 
-                        className={RedInputs ? Style.red : ''} 
+                        className={`${RedInputs ? Style.red : ''} ${WhiteInputs ? Style.White : ''}`}
                         name="Me" 
                         type="text" 
                         placeholder="О себе" 
                         value={about} 
                         onChange={(e) => setAbout(e.target.value)} 
                     />
+                    {ErrorTxt && (
+                    <div className={Style.label2}>
+                    <label htmlFor="Me">
+                        Заполните все поля!
+                    </label>
+                    </div>
+                    )}
                 </div>
-                <button type="submit" >Создать</button>
+                <button type="submit"  onClick={ VisualFunctuion} >Создать</button>
             </form>
             <Outlet />
         </div>

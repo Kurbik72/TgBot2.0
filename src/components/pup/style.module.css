@@ -39,9 +39,7 @@ color: #193128;
     
     
 }
-.kit input{
-    border:1px solid #ffff;
-}
+
 
 .kit label {
     font-family: 'Font1';
@@ -80,4 +78,15 @@ color: #193128;
 }
 .red{
     border: 1px solid red;
+}
+.White{
+    border:1px solid #ffff;
+}
+.label2{
+    padding: 0px 40px;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    color: rgb(226, 114, 92);
+
 }
