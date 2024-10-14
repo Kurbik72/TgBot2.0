@@ -76,6 +76,7 @@ display: none;
     justify-content: center;
     font-family: 'Font1'
     
+    
 }
 .page p{
     color: rgb(124, 180, 230);
@@ -83,6 +84,7 @@ display: none;
     justify-content: center;
     align-items: center;
     text-align: center;
+    
 }
 
 @font-face {
@@ -90,5 +92,8 @@ display: none;
     src: url('../../fonts/Lineyka.otf');
     font-weight: normal;
     font-style: normal;
+}
+.page img {
+    border-radius:3px;
 }
 

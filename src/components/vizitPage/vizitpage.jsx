@@ -13,19 +13,43 @@ const Vizitpage = () => {
 
 
 
+
+
         const Upload = () =>{
             const id = useId()
+
+            const handleImagechange = (event) => {
+                const file = event.target.files[0];
+                if(file){
+                    const reader =new FileReader();
+                    reader.onload = (e) => {
+                        setUrl(e.target.result)
+                    };
+                    reader.readAsDataURL(file);
+                }
+    
+            }
+
+
             return(
         
-            
+
+
+
+        <div className={vizit.labell2}>
         <label htmlFor={id}>
             <div className={vizit.Osn}>
             <div className={vizit.page}>
-        <p>Загрузить <br />фото</p>
+            {url ? (
+            <img src={url} alt="Uploaded" style={{ width: '25vw', height: '13vh' }} />
+                        ) : (
+                    <p>Загрузить <br />фото</p>
+                        )}
         </div>
         </div>
-        <input type="file"  id={id}/>
+        <input type="file"  id={id} onChange={handleImagechange}/>
         </label>
+        </div>
         
         
             )
