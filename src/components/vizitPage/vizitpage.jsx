@@ -1,13 +1,13 @@
 import React, { useState, useId} from 'react'
 import vizit from './vizit.module.css';
-import { useLocation } from 'react-router-dom';
+//import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 
 const Vizitpage = () => {
 
-        const location = useLocation();
-        const { username, about } = location.state || {};
+        //const location = useLocation();
+        //const { username, about } = location.state || {};
         const [url, setUrl] = useState();
 
 
