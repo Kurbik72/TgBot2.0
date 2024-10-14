@@ -41,7 +41,7 @@ const Vizitpage = () => {
             <div className={vizit.Osn}>
             <div className={vizit.page}>
             {url ? (
-            <img src={url} alt="Uploaded" style={{ width: '25vw', height: '13vh' }} />
+            <img src={url} alt="Uploaded" style={{ width: '25vw', height: '14vh' }} />
                         ) : (
                     <p>Загрузить <br />фото</p>
                         )}
@@ -77,16 +77,6 @@ return (
 
 </div>
 </div>
-
-        
-            {/*<div className={vizit.form}> 
-            <div className={vizit.secondStep}>
-        <h1>{username}</h1>
-    <p>Обо мне:</p>
-    <p>{about}</p>
-    </div>
-        </div>
-*/}
     </div>
 );
 };

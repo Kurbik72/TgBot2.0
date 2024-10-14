@@ -94,7 +94,11 @@ display: none;
     font-style: normal;
 }
 .page img {
-    border-radius:3px;
+    margin-top: 6px;
+    width: 25vw;
+    height:14vh;
+    border-radius: 3px;
+    
 
 
 }
@@ -102,7 +106,7 @@ display: none;
 .allInThisPlace{
     display: flex;
     flex-direction: row;
-    gap:30px;
+    gap:50px;
 }
 .inputs input{
     
