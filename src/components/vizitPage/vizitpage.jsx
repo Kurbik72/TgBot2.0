@@ -11,10 +11,6 @@ const Vizitpage = () => {
         const [url, setUrl] = useState();
 
 
-
-
-
-
         const Upload = () =>{
             const id = useId()
 
@@ -41,7 +37,7 @@ const Vizitpage = () => {
             <div className={vizit.Osn}>
             <div className={vizit.page}>
             {url ? (
-            <img src={url} alt="Uploaded" style={{ width: '25vw', height: '14vh' }} />
+            <img src={url} alt="Uploaded" />
                         ) : (
                     <p>Загрузить <br />фото</p>
                         )}
@@ -72,8 +68,20 @@ return (
     </Upload>
 </div>
 <div className={vizit.inputs}> 
-<input type="text"  value={username} readOnly/>
-<input type="text " value={about} readOnly/>
+<textarea
+type="text"
+name='Info1'  
+value={username} 
+readOnly
+
+/>
+<textarea
+type="text "
+name='Info2'
+value={about} 
+readOnly
+
+/>
 
 </div>
 </div>
