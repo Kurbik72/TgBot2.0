@@ -1,13 +1,13 @@
 import React, { useState, useId} from 'react'
 import vizit from './vizit.module.css';
-//import { useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 
 const Vizitpage = () => {
 
-        //const location = useLocation();
-        //const { username, about } = location.state || {};
+        const location = useLocation();
+        const { username, about } = location.state || {};
         const [url, setUrl] = useState();
 
 
@@ -47,7 +47,7 @@ const Vizitpage = () => {
                         )}
         </div>
         </div>
-        <input type="file"  id={id} onChange={handleImagechange}/>
+        <input type="file"  id={id} onChange={handleImagechange}  accept="image/*"/>
         </label>
         </div>
         
@@ -66,10 +66,16 @@ return (
         <div className={vizit.strk}>
             <Link to='/welcomepage'><img src="./strlk.png" alt="strelka" /></Link>
             </div>
+            <div className={vizit.allInThisPlace}>
             <div class={vizit.uploadcontainer}>
-            <Upload onUpload={setUrl}>
-    <img src={url} alt="" />
+            <Upload>
     </Upload>
+</div>
+<div className={vizit.inputs}> 
+<input type="text"  value={username} readOnly/>
+<input type="text " value={about} readOnly/>
+
+</div>
 </div>
 
         
