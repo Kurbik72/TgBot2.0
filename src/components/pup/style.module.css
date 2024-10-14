@@ -83,6 +83,7 @@ color: #193128;
     border:1px solid #ffff;
 }
 .label2{
+    text-align: center;
     padding: 0px 40px;
     display: flex;
     justify-content: center;
