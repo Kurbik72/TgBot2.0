@@ -10,6 +10,25 @@ const Vizitpage = () => {
         const { username, about } = location.state || {};
         const [url, setUrl] = useState();
 
+        
+const heighAuto = () =>{
+    const data = {
+        Info1: username,
+        Info2: about
+        
+    };
+const Info1Element = document.querySelector('[name="Info1"]')
+const Info2Element = document.querySelector('[name="Info2"]')
+    if (data.Info2 !==null && data.Info2.length >40){
+        Info2Element.style.height = "auto"
+
+    };
+
+    if (data.Info1 !==null && data.Info1.length > 20){
+        Info1Element.style.height = "auto"
+    };
+
+}
 
         const Upload = () =>{
             const id = useId()
@@ -67,21 +86,10 @@ return (
             <Upload>
     </Upload>
 </div>
-<div className={vizit.inputs}> 
-<textarea
-type="text"
-name='Info1'  
-value={username} 
-readOnly
+<div className={vizit.allIt} onSubmit={heighAuto} contenteditable="true" > 
 
-/>
-<textarea
-type="text "
-name='Info2'
-value={about} 
-readOnly
-
-/>
+<p className={vizit.inputs1}  contentEditable="false" name ='Info1'> {username}</p>
+<p  className={vizit.inputs}  contentEditable="false" name='Info2'>{about}</p>
 
 </div>
 </div>

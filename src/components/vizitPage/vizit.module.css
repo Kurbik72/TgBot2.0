@@ -66,8 +66,8 @@ display: none;
 }
 .Osn{
     margin-top: 10px;
-    width: 25vw;
-    height:14vh;
+    width: 27vw;
+    height:27vw;
     border-radius: 3px;
     background-color: #dcefdd;
     margin-left: 20px;
@@ -95,8 +95,8 @@ display: none;
 }
 .page img {
     margin-top: 6px;
-    width: 25vw;
-    height:14vh;
+    width: 27vw;
+    height:27vw;
     border-radius: 3px;
     
 
@@ -104,7 +104,12 @@ display: none;
 }
 
 .allInThisPlace{
+    margin-top: 14px;
+    box-shadow: 10px 10px 10px rgb(0 0 0  / 0.5) ;
+    background-color: #B0BF79;
+    border-radius: 20px;
     display: flex;
+    
     flex-direction: row;
     gap:50px;
 }
@@ -114,7 +119,7 @@ display: none;
     padding: 10px 0px;
     
 }
-.inputs textarea {
+.inputs {
     text-align: center;
     color: #000000;
     font-family: 'Font1';
@@ -124,7 +129,25 @@ display: none;
     border-radius: 4px;
     border: 1px solid #ffff;
     width: 50vw;
-    margin-bottom: 2vh;
-    height: 6vh
-}
+    margin-bottom: 3vh;
+    min-height: 12vw;
+    
+} 
 
+.inputs1 {
+    text-align: center;
+    color: #000000;
+    font-family: 'Font1';
+    font-size: 17px;
+    padding: 10px 20px;
+    background-color: #dcefdd;
+    border-radius: 4px;
+    border: 1px solid #ffff;
+    width: 50vw;
+    margin-bottom: 3vw;
+    min-height: 12vw;
+    
+} 
+.allIt{
+    padding: 10px 0px;
+}
